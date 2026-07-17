@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://briket.id/sitemap.xml",
+    sitemap: "https://breket.vercel.app/sitemap.xml",
   };
 }

@@ -17,17 +17,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://briket.id"),
-  title: "Briket.id | Briket Arang Premium dari Serang",
-  description: "Briket arang batok kelapa kualitas ekspor langsung dari pabrik kami di Serang, Banten. Tahan lama, panas merata, sangat nyaman untuk segala acara bakar-bakar dan kumpul keluarga.",
+  metadataBase: new URL("https://breket.vercel.app"),
+  title: "Breket Arang Serang Banten | Briket Arang Premium Kualitas Ekspor",
+  description: "Produsen breket arang Serang Banten — briket batok kelapa kualitas ekspor, tahan lama >2 jam, 100% alami. Melayani eceran & grosir seluruh Indonesia.",
   openGraph: {
-    title: "Briket.id | Briket Arang Premium dari Serang",
-    description: "Briket arang batok kelapa kualitas ekspor langsung dari pabrik kami di Serang, Banten.",
-    url: "https://briket.id",
-    siteName: "Briket.id",
+    title: "Breket Arang Serang Banten | Briket Premium Kualitas Ekspor",
+    description: "Produsen breket arang batok kelapa premium dari Serang, Banten. Tahan lama, panas merata, 100% alami. Melayani eceran & grosir.",
+    url: "https://breket.vercel.app",
+    siteName: "Breket Arang Serang Banten",
     locale: "id_ID",
     type: "website",
-    images: [{ url: "/images/breket.jpg", width: 1200, height: 630, alt: "Briket Arang Premium Briket.id" }],
+    images: [{ url: "/images/breket.jpg", width: 1200, height: 630, alt: "Breket Arang Serang Banten - Briket Premium" }],
   },
   manifest: "/manifest.json",
 };
