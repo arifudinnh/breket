@@ -1,0 +1,6 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#1a1a1a"/>
+  <polygon points="200,80 320,140 320,260 200,320 80,260 80,140" fill="#2a2a2a" stroke="#FF5A1F" stroke-width="2"/>
+  <polygon points="200,110 290,155 290,245 200,290 110,245 110,155" fill="#3a3a3a"/>
+  <text x="200" y="360" font-family="Arial, sans-serif" font-size="24" fill="#FF5A1F" text-anchor="middle" font-weight="bold">Briket Heksagonal</text>
+</svg>
