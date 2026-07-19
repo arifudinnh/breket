@@ -24,18 +24,17 @@ export default function CheckoutForm() {
     
     setIsSubmitting(true);
     
-    // Simulate API call
+    // Construct WhatsApp message
+    const itemsText = cart.map(item => `${item.quantity}x ${item.name}`).join('%0A');
+    const waMessage = `*Pesanan Baru - Briket.id*%0A%0A*Nama:* ${formData.name}%0A*No HP:* ${formData.phone}%0A*Alamat:* ${formData.address}%0A*Metode Pembayaran:* ${formData.paymentMethod === 'transfer' ? 'Transfer Bank' : formData.paymentMethod === 'cod' ? 'Bayar di Tempat (COD)' : 'E-Wallet (OVO/Dana/dll)'}%0A%0A*Detail Pesanan:*%0A${itemsText}%0A%0A*Total Pembayaran:* Rp ${totalPrice.toLocaleString('id-ID')}`;
+    
+    // Open WhatsApp langsung (tanpa setTimeout agar tidak diblokir popup blocker)
+    window.open(`https://wa.me/${process.env.NEXT_PUBLIC_WA_NUMBER}?text=${waMessage}`, '_blank');
+    
+    // Simulate API call untuk UI
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSuccess(true);
-      
-      // Construct WhatsApp message
-      const itemsText = cart.map(item => `${item.quantity}x ${item.name}`).join('%0A');
-      const waMessage = `*Pesanan Baru - Briket.id*%0A%0A*Nama:* ${formData.name}%0A*No HP:* ${formData.phone}%0A*Alamat:* ${formData.address}%0A*Metode Pembayaran:* ${formData.paymentMethod === 'transfer' ? 'Transfer Bank' : formData.paymentMethod === 'cod' ? 'Bayar di Tempat (COD)' : 'E-Wallet (OVO/Dana/dll)'}%0A%0A*Detail Pesanan:*%0A${itemsText}%0A%0A*Total Pembayaran:* Rp ${totalPrice.toLocaleString('id-ID')}`;
-      
-      // Open WhatsApp in new tab using the provided number
-      window.open(`https://wa.me/${process.env.NEXT_PUBLIC_WA_NUMBER}?text=${waMessage}`, '_blank');
-      
       clearCart();
       setTimeout(() => setIsSuccess(false), 5000);
     }, 1500);
